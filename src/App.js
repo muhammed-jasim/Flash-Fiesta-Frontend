@@ -1,8 +1,15 @@
+import { BrowserRouter , Routes , Route } from "react-router-dom";
+import PrimarySearchAppBar from './Components/Navigation';
+import  './App.css';
+
 function App() {
   return (
-    <div className="App">
-      <p>Welcome to Flash Fiesta</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PrimarySearchAppBar />}/>
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
