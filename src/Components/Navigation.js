@@ -12,13 +12,14 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import Layout from '../Layout';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import logopng from '../myntra-logo-m-png-3.png'
 
-
-
-export default function PrimarySearchAppBar() {
+export default function Navigation() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -84,10 +85,10 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
-            <MailIcon />
+            <LocalMallOutlinedIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>Bag</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -96,10 +97,10 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
+            <FavoriteBorderIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>Whislist</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -117,9 +118,9 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    // <MYdiv>
+    <>
         <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundColor:'white', color:'black'}}>
             <Toolbar>
             <IconButton
                 size="large"
@@ -128,7 +129,7 @@ export default function PrimarySearchAppBar() {
                 aria-label="open drawer"
                 sx={{ mr: 2 }}
             >
-                <MenuIcon />
+                <img src={logopng} style={{width:'120px'}} />
             </IconButton>
             <Typography
                 variant="h6"
@@ -149,9 +150,9 @@ export default function PrimarySearchAppBar() {
             </Search>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="error">
-                    <MailIcon />
+                <IconButton size="large" aria-label="show  4 new mails" color="inherit">
+                <Badge badgeContent={4} color="error" >
+                    <LocalMallOutlinedIcon sx={{color:'	#696969'}} />
                 </Badge>
                 </IconButton>
                 <IconButton
@@ -160,7 +161,7 @@ export default function PrimarySearchAppBar() {
                 color="inherit"
                 >
                 <Badge badgeContent={17} color="error">
-                    <NotificationsIcon />
+                    <FavoriteBorderIcon  sx={{color:'	#696969'}} />
                 </Badge>
                 </IconButton>
                 <IconButton
@@ -172,7 +173,7 @@ export default function PrimarySearchAppBar() {
                 onClick={handleProfileMenuOpen}
                 color="inherit"
                 >
-                <AccountCircle />
+                <PersonOutlinedIcon sx={{fontSize:'xx-large',color:'#696969'}} />
                 </IconButton>
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -192,7 +193,8 @@ export default function PrimarySearchAppBar() {
         {renderMobileMenu}
         {renderMenu}
     </Box>
-    // </MYdiv>
+    <Layout />
+    </>
   );
 }
 
