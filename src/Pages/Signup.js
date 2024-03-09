@@ -15,6 +15,7 @@ function Signup() {
         <input type="password" />   
       </div>
 
+
       <button style={{padding:"5px"}}>Submit</button>
     </div>
 
