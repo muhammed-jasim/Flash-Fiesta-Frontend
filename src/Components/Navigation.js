@@ -193,7 +193,6 @@ export default function Navigation() {
         {renderMobileMenu}
         {renderMenu}
     </Box>
-    <Layout />
     </>
   );
 }

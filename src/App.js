@@ -8,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}/>
-        <Route path="home" element={<Home />}/>
+        <Route path="/" element={<Home />}/>
+        <Route path="navigation" element={<Layout />}/>
         <Route path="signup" element={<Signup />}/>
 
       </Routes>
@@ -18,3 +18,4 @@ function App() {
 }
 
 export default App;
+
