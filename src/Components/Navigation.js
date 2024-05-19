@@ -131,15 +131,23 @@ export default function Navigation() {
             >
                 <img src={logopng} style={{width:'120px'}} />
             </IconButton>
-            <Typography
+            {/* <Typography
                 variant="h6"
                 noWrap
                 component="div"
-                sx={{ display: { xs: 'none', sm: 'block' } }}
+                sx={{ display: { xs: 'none', sm: 'block', marginRight:"10px" } }}
             >
                 FLASH FIESTA
-            </Typography>
-            <Search>
+            </Typography> */}
+            <NavTxt >MEN</NavTxt>
+            <NavTxt >WOMEN</NavTxt>
+            <NavTxt >KIDS</NavTxt>
+            <NavTxt >HOME & LIVING</NavTxt>
+            <NavTxt >BEAUTY</NavTxt>
+            <NavTxt >STUDIO</NavTxt>
+
+ 
+            <Search sx={{marginRight:"10px"}}>
                 <SearchIconWrapper>
                 <SearchIcon />
                 </SearchIconWrapper>
@@ -197,15 +205,16 @@ export default function Navigation() {
   );
 }
 
-
+  
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
+    left: '100px',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
+    backgroundColor: '#eaeaea',
+    // '&:hover': {
+    //   backgroundColor: alpha(theme.palette.common.white, 0.25),
+    // },
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
@@ -213,6 +222,10 @@ const Search = styled('div')(({ theme }) => ({
       marginLeft: theme.spacing(3),
       width: 'auto',
     },
+    '& .MuiInputBase-root' : {
+      width : "100%"
+    }
+
   }));
   
   const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -223,6 +236,7 @@ const Search = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: "#586161"  
   }));
   
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -234,8 +248,18 @@ const Search = styled('div')(({ theme }) => ({
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: '20ch',
+        width: '39ch',
       },
+
     },
   }));
+
+  const NavTxt = styled("p") ({
+    fontSize : "13px",
+    margin: '15px',
+    fontFamily:'sans-serif',
+    fontWeight: 'bold',
+    color: "#586161"
+  })
+
   
