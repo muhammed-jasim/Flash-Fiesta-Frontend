@@ -18,6 +18,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import logopng from '../myntra-logo-m-png-3.png'
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -139,7 +140,7 @@ export default function Navigation() {
             >
                 FLASH FIESTA
             </Typography> */}
-            <NavTxt >MEN</NavTxt>
+            <StyledLink to={"/myadmin"} className='Link'><NavTxt >MEN</NavTxt></StyledLink>
             <NavTxt >WOMEN</NavTxt>
             <NavTxt >KIDS</NavTxt>
             <NavTxt >HOME & LIVING</NavTxt>
@@ -254,12 +255,17 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
 
+  const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
   const NavTxt = styled("p") ({
     fontSize : "13px",
     margin: '15px',
     fontFamily:'sans-serif',
     fontWeight: 'bold',
-    color: "#586161"
+    color: "#586161",
+    cursor: 'pointer',
   })
 
   
