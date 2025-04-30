@@ -145,7 +145,7 @@ export default function Navigation() {
             <NavTxt >KIDS</NavTxt>
             <NavTxt >HOME & LIVING</NavTxt>
             <NavTxt >BEAUTY</NavTxt>
-            <NavTxt >STUDIO</NavTxt>
+            <StyledLink to={"/studio"} className='Link'><NavTxt >STUDIO</NavTxt></StyledLink>
 
  
             <Search sx={{marginRight:"10px"}}>
